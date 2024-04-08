@@ -4,6 +4,7 @@
     <title>Login</title>
   </head>
   <body>
+    <h1>login</h1>
     <input type="text" placeholder="username" id="username" onfocusout="myFunction()">
     <br/>
     <br/>
@@ -11,10 +12,17 @@
     <br/>
     <br/>
     <button onclick="dontGo()">submit</button>
+    <span id="msg"></span>
   </body>
   <script>
     function myFunction() {
       document.getElementById('username').value = "";
+
+      var words = ["haha tricked u", "i cleared it", "lolool i cleared your usernem", "nope"];
+
+      var word = words[Math.floor(Math.random() * words.length)];
+      
+      document.getElementById('msg').innerHTML = word;
     }
     function dontGo() {
       alert('please fill out the form!!')
